@@ -1,7 +1,5 @@
-void process2(int M[MAXN][LOGMAXN], int A[MAXN], int N)
-{
+void process2(int M[MAXN][LOGMAXN], int A[MAXN], int N){
 int i, j; 
-
 //initialize M for the intervals with length 1
 for (i = 0; i < N; i++)
 M[i][0] = i;
@@ -11,5 +9,4 @@ for (i = 0; i + (1 << j) - 1 < N; i++)
 if (A[M[i][j - 1]] < A[M[i + (1 << (j - 1))][j - 1]])
 M[i][j] = M[i][j - 1];
 else
-M[i][j] = M[i + (1 << (j - 1))][j - 1];
-}
+M[i][j] = M[i + (1 << (j - 1))][j - 1];}

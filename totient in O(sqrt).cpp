@@ -5,11 +5,7 @@ int phi(int n) {
             while (n % i == 0) {
                 n /= i;
             }
-            res -= res / i;
-        }
-    }
+            res -= res / i;}}
     if (n != 1) {
-        res -= res / n;
-    }
-    return res;
-}
+        res -= res / n;}
+    return res;}

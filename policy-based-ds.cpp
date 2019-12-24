@@ -12,5 +12,4 @@ typedef tree<int, null_type, less_equal<int>, rb_tree_tag,
 int main(){
 	new_data_set p; 
 	p.insert(8LL);	
-	return 0;
-}
+	return 0;}
