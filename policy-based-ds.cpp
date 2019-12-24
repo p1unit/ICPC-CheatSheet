@@ -11,5 +11,7 @@ typedef tree<int, null_type, less_equal<int>, rb_tree_tag,
     new_data_set; 
 int main(){
 	new_data_set p; 
-	p.insert(8LL);	
+	p.insert(8LL);
+	*p.find_by_order(3);//element
+	p.order_of_key(6);//index
 	return 0;}
