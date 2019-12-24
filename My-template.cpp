@@ -1,5 +1,4 @@
 #include<bits/stdc++.h>
-
 #define pb push_back
 #define all(v) (v).begin(),(v).end()
 #define ll long long int
@@ -9,16 +8,12 @@
 #define fi first
 #define se second
 #define pii pair<ll,ll>
-
 using namespace std;
-
 int main(){
 	ll t,i,j,k,m,n;
 	t=1;
 	//cin>>t;
 	while(t--){
-
-
 	}
 	return 0;
 }
