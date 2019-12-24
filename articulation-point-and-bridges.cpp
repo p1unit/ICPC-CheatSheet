@@ -15,11 +15,7 @@ if (parent==-1 && child>1) ap[u] = true;
 else if (parent!=-1 && low[ele]>=disc[u]) ap[u] = true;
 if (low[ele]>disc[u]) bridges.push_back({u, ele});
 }else if (ele != parent){
-low[u] = min(low[u], disc[ele]);
-}
-}
-}
-
+low[u] = min(low[u], disc[ele]);}}}
 int main() {
 int n, m;
 cin >> n >> m;
@@ -28,9 +24,7 @@ for (int i=0;i<m;i++){
 int a, b;
 cin >> a >> b;
 adjList[a].push_back(b);
-adjList[b].push_back(a);
-}
-
+adjList[b].push_back(a);}
 vector<bool> visited(n, false);
 vector<bool> ap(n, false);
 vector<pair<int, int> > bridges;
@@ -42,12 +36,10 @@ if (!visited[i])
 dfs(i, adjList, disc, low, visited, ap, bridges, -1);
 }
 for (int i=0;i<n;i++){
-if (ap[i]) count++;
-}
+if (ap[i]) count++;}
 cout << count << endl;
 for (int i=0;i<n;i++){
-if (ap[i]) cout << i << " ";
-}
+if (ap[i]) cout << i << " ";}
 cout << endl;
 auto compare = [&](auto a, auto b){
 return a.first<b.first || (a.first==b.first && a.second<b.second);
@@ -55,7 +47,5 @@ return a.first<b.first || (a.first==b.first && a.second<b.second);
 sort(bridges.begin(), bridges.end(), compare);
 cout << bridges.size() << endl;
 for (auto& ele: bridges){
-cout << ele.first << " " << ele.second << endl;
-}
-return 0;
-}
+cout << ele.first << " " << ele.second << endl;}
+return 0;}
