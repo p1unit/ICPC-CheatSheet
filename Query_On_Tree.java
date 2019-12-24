@@ -4,12 +4,10 @@ int[] start = new int[MAX + 1];
 int timer = 0;
 int[] idx = new int[MAX + 1];
 int[] end = new int[MAX + 1];
-
 public void solve() {
     int n,q;
     int[] arr = new int[n];
     lists = new ArrayList[n];
-
     dfs(0, -1);
     for (int timer = 1; timer <= n; ++timer) {
         if (arr[idx[timer]] == 0) {

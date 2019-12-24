@@ -17,11 +17,9 @@ public  int[] getLPSArray(char s[]) {
     return lps;
 }
 
-void KMPSearch(String pat, String txt) 
-{ 
+void KMPSearch(String pat, String txt) { 
     int M = pat.length(); 
     int N = txt.length(); 
-
     int lps[] =getLPSArray(pat.toCharArray()); 
     int j = 0,i = 0;  
     while (i < N) { 
@@ -29,10 +27,10 @@ void KMPSearch(String pat, String txt)
             j++; i++; 
         } 
         if (j == M) { 
-            out.println("Foundat index " + (i - j)); 
+            out.println("Found at index " + (i - j)); 
             j = lps[j - 1]; 
         } 
-        else if (i < N && pat.charAt(j) != txt.charAt(i)) { 
+        else if (i < N && pat.charAt(j)!=txt.charAt(i)) { 
             if (j != 0) 
                 j = lps[j - 1]; 
             else
