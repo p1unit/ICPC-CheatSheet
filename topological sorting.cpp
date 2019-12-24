@@ -11,7 +11,6 @@ void dfs(int s){
 }
 void init(){
 for(int i=0;i<25;i++) vis[i] = false;}
-
 int main(){
 	int n,m;int x,y;
 	cin>>n>>m;init();
@@ -24,5 +23,5 @@ int main(){
 	for(int i=n;i>=1;i--){
 		if(vis[i]==false) dfs(i);}
 	for(int i=v.size()-1;i>=0;i--){
-    	cout<<v[i]<<" ";}
+    cout<<v[i]<<" ";}
 return 0;}

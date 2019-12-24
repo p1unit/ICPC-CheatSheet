@@ -5,7 +5,6 @@ void update(int idx,int MAX,int val) {
         idx += (idx & -idx);
     }
 }
-
 int query(int idx) {
     int sum = 0;
     while (idx > 0) {
