@@ -1,12 +1,6 @@
-import java.io.*;
-import java.util.InputMismatchException;
-
 class Template implements Runnable{
-    public void solve(){
-
-    }
-    InputReader in;
-    PrintWriter out;
+    public void solve(){}
+    InputReader in;PrintWriter out;
     @Override
     public void run() {
         InputStream inputStream = System.in;
@@ -16,24 +10,20 @@ class Template implements Runnable{
                 outputStream = new FileOutputStream("path/output.txt");
                 inputStream = new FileInputStream("path/input.txt");
             }
-        } catch (Exception ignored) {
-        }
+        } catch (Exception ignored) {}
         out = new PrintWriter(outputStream);
         in = new InputReader(inputStream);
         solve();
-        out.flush();
-    }
+        out.flush();}
 
     public static void main(String[] args) {
         new Thread(null,new Template(),"Main",1<<27).start();
     }
-
     class InputReader {
         InputStream obj;
         public InputReader(InputStream obj) {
             this.obj = obj;
         }
-
         byte inbuffer[] = new byte[1024];
         int lenbuffer = 0, ptrbuffer = 0;
 
@@ -50,7 +40,6 @@ class Template implements Runnable{
             if (lenbuffer <= 0) return -1;
             return inbuffer[ptrbuffer++];
         }
-
         String ns() {
             int b = skip();
             StringBuilder sb = new StringBuilder();
@@ -61,7 +50,6 @@ class Template implements Runnable{
             }
             return sb.toString();
         }
-
         int ni() {
             int num = 0, b;
             boolean minus = false;
@@ -79,7 +67,6 @@ class Template implements Runnable{
                 b = readByte();
             }
         }
-
         long nl() {
             long num = 0;
             int b;
@@ -98,7 +85,6 @@ class Template implements Runnable{
                 b = readByte();
             }
         }
-
         boolean isSpaceChar(int c) {
             return (!(c >= 33 && c <= 126));
         }
@@ -107,14 +93,6 @@ class Template implements Runnable{
             while ((b = readByte()) != -1 && isSpaceChar(b)) ;
             return b;
         }
-        float nf() {
-            return Float.parseFloat(ns());
-        }
-        double nd() {
-            return Double.parseDouble(ns());
-        }
-        char nc() {
-            return (char) skip();
-        }
-    }
-}
+        float nf() {return Float.parseFloat(ns());}
+        double nd() {return Double.parseDouble(ns());}
+        char nc() {return (char) skip();}}}

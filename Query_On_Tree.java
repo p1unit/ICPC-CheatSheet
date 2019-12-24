@@ -1,4 +1,4 @@
-
+// subtree nodes having 0
 int[] BIT = new int[MAX + 1];
 int[] start = new int[MAX + 1];
 int timer = 0;
