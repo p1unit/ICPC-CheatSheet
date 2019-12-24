@@ -4,14 +4,10 @@ void LIS(vector<ll>&ar, ll n){
 	rep(i,0,n){
 		ll j=upper_bound(all(dp),ar[i])-dp.begin();
 		if(dp[j-1]<ar[i]&&ar[i]<dp[j]){
-			dp[j]=ar[i];
-		}
-	}
+			dp[j]=ar[i];}}
 	ll x=0;
 	rep(i,0,n+1){
 		if(dp[i]!=mod){
-			x=i;
-		}
-	}
+			x=i;}}
 	cout<<x;
 }
